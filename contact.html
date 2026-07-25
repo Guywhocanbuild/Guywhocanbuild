@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — GuyWhoCanBuild</title>
+<link rel="stylesheet" href="assets/css/style.css">
+
+<style>
+  .field { display:flex; flex-direction:column; gap:8px; margin-bottom:22px; }
+  .field label { font-family:var(--font-mono); font-size:13px; color:var(--text-muted); }
+  .field input, .field textarea {
+    background:var(--bg-raised); border:1px solid var(--border); color:var(--text);
+    padding:13px 14px; border-radius:var(--radius-sm); font-family:var(--font-body); font-size:15px;
+    width:100%;
+  }
+  .field textarea { resize:vertical; min-height:100px; }
+  .field input:focus, .field textarea:focus {
+    outline:none; border-color:var(--green-dim); box-shadow:0 0 0 3px var(--green-wash);
+  }
+  .radio-group { display:flex; gap:10px; flex-wrap:wrap; }
+  .radio-option {
+    display:inline-flex; align-items:center; gap:10px; padding:11px 18px;
+    border:1px solid var(--border); border-radius:var(--radius-sm);
+    cursor:pointer; font-size:14.5px; white-space:nowrap;
+    transition:border-color .15s, background .15s;
+  }
+  .radio-option:has(input:checked) { border-color:var(--green); background:var(--green-wash); }
+  .radio-option input[type="radio"] {
+    appearance:none; -webkit-appearance:none;
+    flex-shrink:0; width:15px; height:15px; margin:0;
+    border:1.5px solid var(--text-faint); border-radius:50%;
+    background:transparent; position:relative; cursor:pointer;
+  }
+  .radio-option input[type="radio"]:checked { border-color:var(--green); }
+  .radio-option input[type="radio"]:checked::after {
+    content:''; position:absolute; top:50%; left:50%;
+    width:7px; height:7px; border-radius:50%;
+    background:var(--green); transform:translate(-50%,-50%);
+  }
+  #formMsg { font-family:var(--font-mono); font-size:13.5px; margin-top:14px; display:none; }
+  #formMsg.ok { color:var(--green); display:block; }
+  #formMsg.err { color:#f08a8a; display:block; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand"><span class="caret">&gt;_</span>GuyWhoCanBuild<span class="cursor"></span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">menu</button>
+    <nav class="crumbs" id="crumbs">
+      <a href="about.html">~/about</a><span class="sep">/</span>
+      <a href="how-we-work.html">~/how-we-work</a><span class="sep">/</span>
+      <a href="projects.html">~/projects</a><span class="sep">/</span>
+      <a href="contact.html" class="nav-cta active" style="background:var(--green); color:#06120a;">~/contact →</a>
+    </nav>
+  </div>
+</header>
+
+<section style="padding-bottom:32px;">
+  <div class="wrap">
+    <div class="eyebrow">let's build something great</div>
+    <h1 style="font-family:var(--font-display); font-size:clamp(32px,4.4vw,48px); font-weight:700; letter-spacing:-0.015em; max-width:680px;">
+      Have an idea? Let's talk about it.
+    </h1>
+    <p style="color:var(--text-muted); font-size:17px; margin-top:16px; max-width:600px;">
+      Fill out the form below, or reach out directly on X, GitHub, or email.
+    </p>
+  </div>
+</section>
+
+<section style="border-bottom:none; padding-top:0;">
+  <div class="wrap" style="display:grid; grid-template-columns:1.3fr 1fr; gap:32px; align-items:start;">
+
+    <div class="card" style="padding:36px;">
+      <form
+        id="contactForm"
+        action="https://docs.google.com/forms/d/e/1FAIpQLSevT7kzHmnAY5tyEqU4Q36VTxLBK7XmtDS4wOPpb5acljc3jg/formResponse"
+        method="POST"
+        target="hidden_iframe">
+        <div class="field">
+          <label for="name">Your name</label>
+          <input type="text" id="name" name="entry.1272269112" placeholder="Your Good Name." required>
+        </div>
+        <div class="field">
+          <label for="email">Your email</label>
+          <input type="email" id="email" name="entry.943762154" placeholder="you@company.com" required>
+        </div>
+        <div class="field">
+          <label>What do you want from us?</label>
+          <div class="radio-group">
+            <label class="radio-option"><input type="radio" name="entry.1740678826" value="iOS app" required><span>iOS app</span></label>
+            <label class="radio-option"><input type="radio" name="entry.1740678826" value="Web app" required><span>Web app</span></label>
+            <label class="radio-option"><input type="radio" name="entry.1740678826" value="Both" required><span>Both</span></label>
+          </div>
+        </div>
+        <div class="field">
+          <label for="idea">Briefly explain your idea</label>
+          <textarea id="idea" name="entry.1496682986" placeholder="What are you trying to build? Who's it for?" required></textarea>
+        </div>
+        <div class="field">
+          <label for="reach">How can we contact you? (phone, WhatsApp, preferred email, etc.)</label>
+          <input type="text" id="reach" name="entry.1199496833" placeholder="e.g. WhatsApp,Telegram etc." required>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;" id="submitBtn">Send message →</button>
+        <div id="formMsg"></div>
+      </form>
+      <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+    </div>
+
+    <div style="display:flex; flex-direction:column; gap:20px;">
+      <div class="card">
+        <div class="eyebrow" style="margin-bottom:10px;">follow along</div>
+        <p class="text-muted" style="font-size:14.5px; margin-bottom:14px;">Building in public — updates, ships, and behind-the-scenes on X.</p>
+        <a href="https://x.com/I_CAN_BUILD" target="_blank" rel="noopener" class="btn btn-ghost" style="width:100%; justify-content:center;">𝕏 @I_CAN_BUILD →</a>
+      </div>
+
+      <div class="card">
+        <div class="eyebrow" style="margin-bottom:14px;">direct contact</div>
+        <div class="mono" style="display:flex; flex-direction:column; gap:14px; font-size:14px;">
+          <a href="mailto:yesguycanbuild@gmail.com" style="display:block; color:var(--text); font-size:14px;">✉ yesguycanbuild@gmail.com</a>
+          <a href="https://github.com/Guywhocanbuild" target="_blank" rel="noopener" style="display:block; color:var(--text); font-size:14px;">⌥ github.com/Guywhocanbuild</a>
+          <a href="https://x.com/I_CAN_BUILD" target="_blank" rel="noopener" style="display:block; color:var(--text); font-size:14px;">𝕏 x.com/I_CAN_BUILD</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="eyebrow" style="margin-bottom:10px;">we work with</div>
+        <div style="display:flex; gap:8px; flex-wrap:wrap;">
+          <span class="tag">Healthcare</span><span class="tag">Small Startups</span><span class="tag">Logistics</span><span class="tag">Consultancy</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-brand">GuyWhoCanBuild_ — Building ideas into reality.</div>
+    <div class="footer-links">
+      <a href="https://github.com/Guywhocanbuild" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://x.com/I_CAN_BUILD" target="_blank" rel="noopener">X</a>
+      <a href="mailto:yesguycanbuild@gmail.com">Email</a>
+    </div>
+    <div class="mono text-muted" style="font-size:12.5px;">© 2026 GuyWhoCanBuild</div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

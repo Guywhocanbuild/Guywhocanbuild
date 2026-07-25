@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — GuyWhoCanBuild</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand"><span class="caret">&gt;_</span>GuyWhoCanBuild<span class="cursor"></span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">menu</button>
+    <nav class="crumbs" id="crumbs">
+      <a href="about.html">~/about</a><span class="sep">/</span>
+      <a href="how-we-work.html">~/how-we-work</a><span class="sep">/</span>
+      <a href="projects.html" class="active">~/projects</a><span class="sep">/</span>
+      <a href="contact.html" class="nav-cta">~/contact →</a>
+    </nav>
+  </div>
+</header>
+
+<section style="padding-bottom:56px;">
+  <div class="wrap">
+    <div class="eyebrow">selected work</div>
+    <h1 style="font-family:var(--font-display); font-size:clamp(32px,4.4vw,48px); font-weight:700; letter-spacing:-0.015em; max-width:680px;">
+      Built. Deployed. Making an impact.
+    </h1>
+    <p style="color:var(--text-muted); font-size:17px; margin-top:16px; max-width:600px;">
+      Three products, each with a web app, an iOS app, and one shared backend behind it.
+    </p>
+  </div>
+</section>
+
+<section style="border-bottom:none;">
+  <div class="wrap" style="display:flex; flex-direction:column; gap:24px;">
+
+    <div class="card" style="padding:36px; display:grid; grid-template-columns:1fr 1fr; gap:36px; align-items:center;">
+      <div>
+        <div class="mono" style="color:var(--green); font-size:12.5px; margin-bottom:10px;">01 — INFRASTRUCTURE MONITORING</div>
+        <h2 style="font-size:26px; margin-bottom:12px;">PulsePing</h2>
+        <p class="text-muted" style="font-size:15px; margin-bottom:22px;">
+          Real-time uptime tracking, service alerts, and incident analytics — built to keep teams ahead of downtime instead of reacting to it.
+        </p>
+        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-bottom:24px;">
+          <span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">MongoDB</span><span class="tag">SwiftUI</span>
+        </div>
+        <a href="https://github.com/Guywhocanbuild/pulseping" target="_blank" rel="noopener" class="btn btn-ghost">View on GitHub →</a>
+      </div>
+      <div class="term">
+        <div class="term-bar"><span class="term-dot"></span><span class="term-dot"></span><span class="term-dot"></span><span class="term-title">PulsePing — overview</span></div>
+        <div class="term-body">
+          <div class="muted">Uptime</div>
+          <div style="color:var(--green); font-size:22px; margin:4px 0 16px;">99.98%</div>
+          <div class="muted">Response time · 120ms &nbsp;·&nbsp; Active alerts · 0</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="padding:36px; display:grid; grid-template-columns:1fr 1fr; gap:36px; align-items:center;">
+      <div style="order:2;">
+        <div class="mono" style="color:var(--violet); font-size:12.5px; margin-bottom:10px;">02 — AI HEALTH COMPANION</div>
+        <h2 style="font-size:26px; margin-bottom:12px;">PulseCoach</h2>
+        <p class="text-muted" style="font-size:15px; margin-bottom:22px;">
+          An AI-powered health coaching app with personalized daily summaries, progress tracking, and habit insights — powered by tool-grounded AI, not hallucinated numbers.
+        </p>
+        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-bottom:24px;">
+          <span class="tag">Groq · Llama 3.3</span><span class="tag">HealthKit</span><span class="tag">SwiftUI</span><span class="tag">SSE</span>
+        </div>
+        <a href="https://github.com/Guywhocanbuild/Pulsecoach" target="_blank" rel="noopener" class="btn btn-ghost">View on GitHub →</a>
+      </div>
+      <div class="term" style="order:1;">
+        <div class="term-bar"><span class="term-dot"></span><span class="term-dot"></span><span class="term-dot"></span><span class="term-title">PulseCoach — daily summary</span></div>
+        <div class="term-body">
+          <div class="muted">Today's score</div>
+          <div style="color:var(--violet); font-size:22px; margin:4px 0 16px;">85 / 100</div>
+          <div class="muted">Heart rate · 72bpm &nbsp;·&nbsp; Sleep · 7h 20m</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="padding:36px; display:grid; grid-template-columns:1fr 1fr; gap:36px; align-items:center;">
+      <div>
+        <div class="mono" style="color:var(--green); font-size:12.5px; margin-bottom:10px;">03 — E-COMMERCE</div>
+        <h2 style="font-size:26px; margin-bottom:12px;">PulseCart</h2>
+        <p class="text-muted" style="font-size:15px; margin-bottom:22px;">
+          A full-stack shopping platform with an admin dashboard, order management, Cloudinary-backed product images, and a receipt-styled brand identity across web and iOS.
+        </p>
+        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-bottom:24px;">
+          <span class="tag">Express</span><span class="tag">JWT Auth</span><span class="tag">Cloudinary</span><span class="tag">Resend</span>
+        </div>
+        <a href="https://github.com/Guywhocanbuild/Pulsecart" target="_blank" rel="noopener" class="btn btn-ghost">View on GitHub →</a>
+      </div>
+      <div class="term">
+        <div class="term-bar"><span class="term-dot"></span><span class="term-dot"></span><span class="term-dot"></span><span class="term-title">PulseCart — checkout</span></div>
+        <div class="term-body">
+          <div class="muted">Wireless Headphones</div>
+          <div style="color:var(--green); font-size:22px; margin:4px 0 16px;">$59.99</div>
+          <div class="muted">In stock &nbsp;·&nbsp; Free shipping over $50</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section style="border-bottom:none;">
+  <div class="wrap">
+    <div class="card" style="padding:48px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:24px; background:var(--surface-2);">
+      <div>
+        <h2 style="font-family:var(--font-display); font-size:26px; margin-bottom:8px;">Want something like this built?</h2>
+        <p class="text-muted">Whether it's web, iOS, or both — let's talk about it.</p>
+      </div>
+      <a href="contact.html" class="btn btn-primary">Start a project →</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-brand">GuyWhoCanBuild_ — Building ideas into reality.</div>
+    <div class="footer-links">
+      <a href="https://github.com/Guywhocanbuild" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://x.com/I_CAN_BUILD" target="_blank" rel="noopener">X</a>
+      <a href="mailto:yesguycanbuild@gmail.com">Email</a>
+    </div>
+    <div class="mono text-muted" style="font-size:12.5px;">© 2026 GuyWhoCanBuild</div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
