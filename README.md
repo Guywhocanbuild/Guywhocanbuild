@@ -2,7 +2,7 @@
 
 Personal portfolio site for **GuyWhoCanBuild**, showcasing full-stack products built end-to-end across web and iOS: **PulsePing**, **PulseCoach**, and **PulseCart**.
 
-🔗 Live: [guywhocanbuild.github.io](https://guywhocanbuild.github.io)
+🔗 Live: [guywhocanbuild.github.io](https://guywhocanbuild.github.io/Guywhocanbuild/))
 
 ## Overview
 
